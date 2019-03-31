@@ -20,15 +20,15 @@ The `solax` platform uses the [ha-solax](https://github.com/squishykid/ha-solax)
 
 To use the Solax sensors in your installation, add the following to your configuration.yaml file:
 
-
+{% raw %}
 ```yaml
 # Example configuration.yaml entry
 sensor:
   - platform: solax
     ip_address: IP_ADDRESS
 ```
-
-
+{% endraw %}
+{% configuration %}
 ### CONFIGURATION VARIABLES
 ip_address:
   description: The IP address of your Solax system.
@@ -39,6 +39,7 @@ ip_address:
 
 ### {% linkable_title Full configuration sample %}
 
+{% raw %}
 A full configuration entry would look like the sample below.
 
 
@@ -48,11 +49,11 @@ sensor:
   - platform: solax
     ip_address: 192.168.0.3
 ```
-
+{% endraw %}
 
 If you would like to convert the values from multiple panels or view the total power the house is using, you can use the [template platform](/components/sensor.template/).
 
-
+{% raw %}
 ```yaml
 # Example configuration.yaml entry for template platform
 sensors:
@@ -67,3 +68,4 @@ sensors:
       unit_of_measurement: 'W'
       value_template: "{{ (states('sensor.power_now') | float) - (states('sensor.exported_power') | float) }}"
 ```
+{% endraw %}
