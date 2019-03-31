@@ -8,7 +8,7 @@ sidebar: true
 comments: false
 sharing: true
 footer: true
-logo: solax.png
+logo: solax-logo.png
 ha_category: Sensor
 ha_release: 0.91
 ha_iot_class: Local Polling
@@ -16,7 +16,7 @@ ha_iot_class: Local Polling
 
 The `solax` platform uses the [ha-solax](https://github.com/squishykid/ha-solax) API to allow you to get details from your Solax solar power setup and integrate these in your Home Assistant installation.
 
-## Configuration
+## {% linkable_title Configuration %}
 
 To use the Solax sensors in your installation, add the following to your configuration.yaml file:
 
@@ -37,7 +37,7 @@ ip_address:
 {% endconfiguration %}
 
 
-### FULL CONFIGURATION SAMPLE
+### {% linkable_title Full configuration sample %}
 
 A full configuration entry would look like the sample below.
 
